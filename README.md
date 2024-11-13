@@ -1,6 +1,9 @@
 ### setup sshkey
-- ```ssh-keygen -t ed25519 -C "your.email@example.com"``` // generate public key
-- ```cat ~/.ssh/id_ed25519.pub```                         // read public key and pair to github
+- ```ls -al ~/.ssh```                                      // Lists the files in your .ssh directory, if they exist
+- ```ssh-keygen -t rsa -C "your_email@example.com"```     // Creates a new ssh key, using the provided email as a label and Enter file in which to save the key (/home/you/.ssh/id_rsa):
+- ```eval "$(ssh-agent -s)"```                            // start the ssh-agent in the background
+- ```ssh-add ~/.ssh/id_rsa```
+- ```cat ~/.ssh/id_rsa.pub```                             // read public key and pair to github & paste into github sshkey
 - ```ssh -T git@github.com```                             // verify pairing github n ur device
 ### setup
 - ```git init```                                     // Inisialisasi repositori Git baru
