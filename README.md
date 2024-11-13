@@ -1,3 +1,7 @@
+### setup sshkey
+- ```ssh-keygen -t ed25519 -C "your.email@example.com"``` // generate public key
+- ```cat ~/.ssh/id_ed25519.pub```                         // read public key and pair to github
+- ```ssh -T git@github.com```                             // verify pairing github n ur device
 ### setup
 - ```git init```                                     // Inisialisasi repositori Git baru
 - ```git config --global user.name "Your Name"```     // Setel nama pengguna global
